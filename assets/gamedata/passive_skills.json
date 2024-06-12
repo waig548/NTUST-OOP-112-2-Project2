@@ -1,0 +1,87 @@
+[
+    {
+        "id": "passive:hammer_splash",
+        "name": "Hammer-Splash",
+        "trigger_type": "after_attack",
+        "require_active_skill": true,
+        "actions": [
+            {
+                "action_type": "debuff",
+                "target_type": "main",
+                "buffs": [
+                    {
+                        "id": "debuff:stun",
+                        "turns": 1
+                    }
+                ]
+            },
+            {
+                "action_type": "damage",
+                "target_type": "splash_excluding_main",
+                "damage_type": "default",
+                "damage_expr": "main_damage*0.5"
+            }
+        ],
+        "condition": "skill.target_type==TargetType.Single && rolled_result==dice_rolls",
+        "base_cooldown": 0,
+        "description": "If a single-target attack scores critical success,\nthe main target is stunned and others receive 50% of dealt damage"
+    },
+    {
+        "id": "passive:destroy",
+        "name": "Destroy",
+        "trigger_type": "after_attack",
+        "require_active_skill": true,
+        "actions": [
+            {
+                "action_type": "destroy",
+                "target_type": "main",
+                "destroy_amount": 1
+            }
+        ],
+        "condition": "skill.target_type==TargetType.Single && did_damage",
+        "base_cooldown": 0,
+        "description": "Destroy a randome piece of equipment on the main target if dattack is successful"
+    },
+    {
+        "id": "passive:fortify",
+        "name": "Fortify",
+        "trigger_type": "before_attacked",
+        "require_active_skill": false,
+        "actions": [
+            {
+                "action_type": "buff",
+                "target_type": "self",
+                "buffs": [
+                    {
+                        "id": "buff:fortify",
+                        "turns": -1
+                    }
+                ]
+            }
+        ],
+        "condition": "sourceAction.target_type==TargetType.Single",
+        "base_cooldown": 5,
+        "description": "Apply \"Fortify\" to self if about to be attacked by a single-target attack"
+    },
+    {
+        "id": "passive:poisonous",
+        "name": "Poisonous",
+        "trigger_type":"after_attack",
+        "require_active_skill":true,
+        "actions":[
+            {
+                "action_type": "debuff",
+                "target_type":"main",
+                "buffs":[
+                    {
+                        "id": "debuff:poisoned",
+                        "turns": 2
+                    }
+                ]
+            }
+        ],
+        "condition": "did_damage",
+        "base_cooldown":0,
+        "description" :"Apply \"Poisoned\" to the main target if attack is successful"
+    }
+]

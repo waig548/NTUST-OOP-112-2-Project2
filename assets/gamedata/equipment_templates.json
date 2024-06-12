@@ -1,0 +1,278 @@
+[
+    {
+        "id": "weapon:wooden_sword",
+        "name": "WoodenSword",
+        "equipment_type": "weapon",
+        "weapon_dice_rolls": 3,
+        "weapon_damage_type": "physical",
+        "modifiers": [
+            {
+                "type": "direct_add",
+                "value": 5,
+                "target_path": "attr.p_atk"
+            },
+            {
+                "type": "direct_add",
+                "value": 10,
+                "target_path": "attr.hit_rate"
+            }
+        ],
+        "skills": [
+            "active:speed_up"
+        ],
+        "shop_value": 20,
+        "description": "A normal wooden sword\nIt's light enough to be faster than bare hands somehow\n+5 PATK\n+10 Hit Rate\nSkills: SpeedUp"
+    },
+    {
+        "id": "weapon:hammer",
+        "name": "Hammer",
+        "equipment_type": "weapon",
+        "weapon_dice_rolls": 4,
+        "weapon_damage_type": "physical",
+        "modifiers": [
+            {
+                "type": "direct_add",
+                "value": 15,
+                "target_path": "attr.p_atk"
+            },
+            {
+                "type": "direct_add",
+                "value": -15,
+                "target_path": "attr.hit_rate"
+            }
+        ],
+        "skills": [
+            "passive:hammer_splash",
+            "active:provoke"
+        ],
+        "shop_value": 25,
+        "description": "An ordinary HAMMAH\nTry telling your enemies that you want to smack them with this,\nthey'll deffinitely like it\n+15 PATK\n-15 Hit Rate\nSkills: Provoke, Hammer-Splash"
+    },
+    {
+        "id": "weapon:giant_hammer",
+        "name": "GiantHammer",
+        "equipment_type": "weapon",
+        "weapon_dice_rolls": 5,
+        "weapon_damage_type": "physical",
+        "modifiers": [
+            {
+                "type": "direct_add",
+                "value": 15,
+                "target_path": "attr.p_atk"
+            },
+            {
+                "type": "direct_add",
+                "value": -15,
+                "target_path": "attr.hit_rate"
+            }
+        ],
+        "skills": [
+            "passive:hammer_splash"
+        ],
+        "shop_value": 45,
+        "description": "An even BIGGER HAMMAH\nThey don't like this too much\n+15 PATK\n-15 Hit Rate\nSkills: Hammer-Splash"
+    },
+    {
+        "id": "weapon:magic_wand",
+        "name": "MagicWand",
+        "equipment_type": "weapon",
+        "weapon_dice_rolls": 3,
+        "weapon_damage_type": "magical",
+        "modifiers": [
+            {
+                "type": "direct_add",
+                "value": 10,
+                "target_path": "attr.m_atk"
+            }
+        ],
+        "skills": [
+            "active:shock_blast",
+            "active:heal"
+        ],
+        "shop_value": 40,
+        "description": "An ordinary yet versatile magic wand\nNo, it doesn't shoot out fireworks\n+10 MATK\nSkills: Shock-Blast, Heal"
+    },
+    {
+        "id": "weapon:ritual_sword",
+        "name": "RitualSword",
+        "equipment_type": "weapon",
+        "weapon_dice_rolls": 1,
+        "weapon_damage_type": "magical",
+        "modifiers": [
+            {
+                "type": "direct_add",
+                "value": 15,
+                "target_path": "attr.m_atk"
+            }
+        ],
+        "skills": [
+            "active:shock_blast"
+        ],
+        "shop_value": 35,
+        "description": "An omnious looking ritual dagger\nNo one knows what this is or was for, but it doesn't matter anymore\n+15 MATK\nSkills: Shock-Blast"
+    },
+    {
+        "id": "weapon:dirty_stuff",
+        "name": "DirtyStuff",
+        "equipment_type": "weapon",
+        "weapon_dice_rolls": 1,
+        "weapon_damage_type": "physical",
+        "modifiers": [],
+        "skills": [
+            "passive:destroy"
+        ],
+        "shop_value": 10,
+        "description": "Yuck! How do you get hold of this thing?\nIt's corrosive, maybe it'll be useful against some enemies?\nSkills: Destroy"
+    },
+    {
+        "id":"weapon:poison_dagger",
+        "name": "PoisonedDagger",
+        "equipment_type": "weapon",
+        "weapon_dice_rolls":1,
+        "weapon_damage_type":"physical",
+        "modifiers":[],
+        "skills":[
+            "passive:poisonous"
+        ],
+        "shop_value":25,
+        "description": "A sharp dagger with poison on its tip\nInflicts \"Poisoned\" effect on successfull active attacks"
+    },
+    {
+        "id": "armor:wooden_shield",
+        "name": "WoodenShield",
+        "equipment_type": "armor",
+        "modifiers": [
+            {
+                "type": "direct_add",
+                "value": 10,
+                "target_path": "attr.p_def"
+            }
+        ],
+        "skills": [
+            "active:provoke"
+        ],
+        "shop_value": 15,
+        "description": "An ordinary wooden shield\nNothing special, but enemies sometimes get carried away seeing this\n+10 PDEF\nSkills: Provoke"
+    },
+    {
+        "id": "armor:plate_armor",
+        "name": "PlateArmor",
+        "equipment_type": "armor",
+        "modifiers": [
+            {
+                "type": "direct_add",
+                "value": 20,
+                "target_path": "attr.p_def"
+            },
+            {
+                "type": "direct_add",
+                "value": -10,
+                "target_path": "attr.speed"
+            }
+        ],
+        "skills": [
+            "passive:fortify"
+        ],
+        "shop_value": 30,
+        "description": "An ordinary plate armor\nHeavy but very protective\n+20 PDEF\n-10 Speed\nSkills: Fortify"
+    },
+    {
+        "id": "armor:leather_armor",
+        "name": "LeatherArmor",
+        "equipment_type": "armor",
+        "modifiers": [
+            {
+                "type": "direct_add",
+                "value": 5,
+                "target_path": "attr.p_def"
+            }
+        ],
+        "skills": [
+            "passive:fortify"
+        ],
+        "shop_value": 20,
+        "description": "An ordinary leather armor\nNot very strong but still works\n+5 PDEF\nSkills: Fortify"
+    },
+    {
+        "id": "armor:robe",
+        "name": "Robe",
+        "equipment_type": "armor",
+        "modifiers": [
+            {
+                "type": "direct_add",
+                "value": 10,
+                "target_path": "attr.m_def"
+            }
+        ],
+        "skills": [],
+        "shop_value": 25,
+        "description": "A ceremonial robe\nIt holds some magic powers of protections\n+10 MDEF"
+    },
+    {
+        "id": "armor:laurel_wreath",
+        "name": "LaurelWreath",
+        "equipment_type": "armor",
+        "modifiers": [
+            {
+                "type": "final_mult",
+                "value": 1.1,
+                "target_path": "attr.m_def"
+            }
+        ],
+        "skills": [],
+        "shop_value": 25,
+        "description": "A elegantly designed laurel wreath\nThe origin of this item is long lost to time, and now it could be in your hands\nx 1.1 MDEF"
+    },
+    {
+        "id": "accessory:holy_grail",
+        "name": "HolyGrail",
+        "equipment_type": "accessory",
+        "modifiers": [
+            {
+                "type": "direct_add",
+                "value": 30,
+                "target_path": "attr.m_def"
+            }
+        ],
+        "skills": [
+            "active:heal"
+        ],
+        "shop_value": 50,
+        "description": "THE POWER OF THE HOLY COMNPELS YOU!\n+30 MDEF\nSkills: Heal"
+    },
+    {
+        "id": "accessory:shoes",
+        "name": "Shoes",
+        "equipment_type": "accessory",
+        "modifiers": [
+            {
+                "type": "direct_add",
+                "value": 5,
+                "target_path": "attr.speed"
+            },
+            {
+                "type": "final_add",
+                "value": 1,
+                "target_path": "attr.ap_boost"
+            }
+        ],
+        "skills": [],
+        "shop_value": 20,
+        "description": "An ordinary pair of shoes\nNot too fancy, but at least you don't need to walk bare feet\n+5 Speed\n+1 AP"
+    },
+    {
+        "id": "accessory:bracelet",
+        "name": "Bracelet",
+        "equipment_type": "accessory",
+        "modifiers": [
+            {
+                "type": "final_add",
+                "value": 1,
+                "target_path": "attr.max_focus"
+            }
+        ],
+        "skills": [],
+        "shop_value": 75,
+        "description": "A delicate gem bracelet of high quality\nWearing it somehow make you feel more focused\n+1 MAX Focus"
+    }
+]

@@ -1,0 +1,45 @@
+[
+    {
+        "id": "item:gods_beard",
+        "name": "GodsBeard",
+        "available_in_combat": true,
+        "actions": [
+            {
+                "action_type": "heal",
+                "target_type": "self",
+                "heal_expr": "25"
+            }
+        ],
+        "shop_value": 10,
+        "description": "Recover 25 HP"
+    },
+    {
+        "id": "item:golden_root",
+        "name": "GoldenRoot",
+        "available_in_combat": true,
+        "actions": [
+            {
+                "action_type": "modify_stat",
+                "target_type": "self",
+                "target_path": "stat.focus",
+                "modify_amount": 3
+            }
+        ],
+        "shop_value": 20,
+        "description": "Recover 3 Focus"
+    },
+    {
+        "id": "item:teleport_scroll",
+        "name": "TeleportScroll",
+        "actions": [],
+        "shop_value": 50,
+        "description": "Teleport to any empty rect"
+    },
+    {
+        "id": "item:tent",
+        "name": "Tent",
+        "actions": [],
+        "shop_value": 100,
+        "description": "Place a tent for rest"
+    }
+]

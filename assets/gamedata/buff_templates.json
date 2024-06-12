@@ -1,0 +1,67 @@
+[
+    {
+        "id": "debuff:angry",
+        "name": "Angry",
+        "effect_type": "modifier",
+        "modifiers": [
+            {
+                "type": "final_mult",
+                "value": 0.7,
+                "target_path": "attr.dice_chance_mult"
+            }
+        ],
+        "description": "Roll chance x 70%"
+    },
+    {
+        "id": "debuff:stun",
+        "name": "Dizziness",
+        "effect_type": "skip_turn",
+        "description": "Unable to act"
+    },
+    {
+        "id": "debuff:poisoned",
+        "name": "Poisoned",
+        "effect_type": "action",
+        "actions": [
+            {
+                "action_type": "damage",
+                "target_type": "self",
+                "damage_type": "true",
+                "damage_expr": "max(self.hp*0.1, 1)"
+            }
+        ],
+        "description": "Receive current HP x 10% true damage each turn"
+    },
+    {
+        "id": "buff:speed_up",
+        "name": "SpeedUp",
+        "effect_type": "modifier",
+        "modifiers": [
+            {
+                "type": "final_mult",
+                "value": 1.5,
+                "target_path": "attr.speed"
+            }
+        ],
+        "description": "Speed x 150%"
+    },
+    {
+        "id": "buff:dummy",
+        "name": "TestBuffPleaseIgnore",
+        "effect_type": "none",
+        "description": "Plz ignore me"
+    },
+    {
+        "id": "buff:fortify",
+        "name": "Fortify",
+        "effect_type": "modifier",
+        "modifiers": [
+            {
+                "type": "final_mult",
+                "value": 0.9,
+                "target_path": "attr.dmg_taken"
+            }
+        ],
+        "description": "DMG Taken x 90%"
+    }
+]

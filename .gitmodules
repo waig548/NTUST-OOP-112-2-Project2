@@ -1,0 +1,24 @@
+[submodule "externals/stduuid"]
+	path = externals/stduuid
+	url = https://github.com/mariusbancila/stduuid.git
+[submodule "externals/json"]
+	path = externals/json
+	url = https://github.com/nlohmann/json.git
+[submodule "externals/cparse"]
+	path = externals/cparse
+	url = https://github.com/cparse/cparse.git
+[submodule "externals/CRCpp"]
+	path = externals/CRCpp
+	url = https://github.com/d-bahr/CRCpp.git
+[submodule "externals/imgui"]
+	path = externals/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "externals/glfw"]
+	path = externals/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "externals/random"]
+	path = externals/random
+	url = https://github.com/ilqvya/random.git
+[submodule "externals/ImGuiFileDialog"]
+	path = externals/ImGuiFileDialog
+	url = https://github.com/aiekick/ImGuiFileDialog.git

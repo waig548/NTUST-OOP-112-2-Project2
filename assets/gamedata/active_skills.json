@@ -1,0 +1,170 @@
+[
+    {
+        "id": "active:basic_attack",
+        "name": "Attack",
+        "dice_rolls": 1,
+        "roll_chance_expr": "self.hit_rate",
+        "allow_partial": true,
+        "skill_type": "attack",
+        "target_type": "single",
+        "target_scope": "enemy",
+        "actions": [
+            {
+                "action_type": "damage",
+                "target_type": "single",
+                "target_scope": "enemy",
+                "damage_type": "default",
+                "damage_expr": "self.atk"
+            }
+        ],
+        "base_cooldown": 0,
+        "description": "Basic attack, dealing 100% of ATK (depends on weapon)"
+    },
+    {
+        "id": "active:flee",
+        "name": "Flee",
+        "dice_rolls": 1,
+        "roll_chance_expr": "min(98 ,(self.hp/(self.max_hp+self.p_def+self.m_def))*self.speed)",
+        "skill_type": "flee",
+        "target_type": "self",
+        "actions": [
+            {
+                "action_type": "flee",
+                "target_type": "self"
+            }
+        ],
+        "base_cooldown": 0,
+        "description": "Try to flee the battlefield"
+    },
+    {
+        "id": "active:provoke",
+        "name": "Provoke",
+        "dice_rolls": 1,
+        "roll_chance_expr": "self.hp/(self.max_hp+self.p_atk+self.m_atk)",
+        "skill_type": "debuff",
+        "target_type": "single",
+        "target_scope": "enemy",
+        "actions": [
+            {
+                "action_type": "debuff",
+                "target_type": "single",
+                "target_scope": "enemy",
+                "buffs": [
+                    {
+                        "id": "debuff:angry",
+                        "turns": 3
+                    }
+                ]
+            }
+        ],
+        "base_cooldown": 2,
+        "description": "Apply \"Angry\" to a enemy for 3 turns"
+    },
+    {
+        "id": "active:shock_blast",
+        "name": "Shock-Blast",
+        "dice_rolls": 3,
+        "roll_chance_expr": "self.hit_rate-5",
+        "allow_partial": true,
+        "skill_type": "attack",
+        "target_type": "splash",
+        "target_scope": "enemy",
+        "actions": [
+            {
+                "action_type": "damage",
+                "target_type": "splash",
+                "target_scope": "enemy",
+                "damage_type": "magical",
+                "damage_expr": "self.m_atk*0.5"
+            }
+        ],
+        "base_cooldown": 1,
+        "description": "Magical splash attack, dealing 50% of MATK"
+    },
+    {
+        "id": "active:heal",
+        "name": "Heal",
+        "dice_rolls": 2,
+        "roll_chance_expr": "self.hit_rate",
+        "allow_partial": true,
+        "skill_type": "heal",
+        "target_type": "single",
+        "target_scope": "ally",
+        "actions": [
+            {
+                "action_type": "heal",
+                "target_type": "single",
+                "target_scope": "ally",
+                "heal_expr": "self.m_atk*1.5"
+            }
+        ],
+        "base_cooldown": 1,
+        "description": "Heal an ally with 150% of MATK"
+    },
+    {
+        "id": "active:speed_up",
+        "name": "SpeedUp",
+        "dice_rolls": 2,
+        "roll_chance_expr": "self.hit_rate",
+        "skill_type": "buff",
+        "target_type": "single",
+        "target_scope": "ally",
+        "actions": [
+            {
+                "action_type": "buff",
+                "target_type": "single",
+                "target_scope": "ally",
+                "buffs": [
+                    {
+                        "id": "buff:speed_up",
+                        "turns": 1
+                    }
+                ]
+            }
+        ],
+        "base_cooldown": 3,
+        "description": "Apply \"SpeedUp\" to an ally for 1 turn"
+    },
+    {
+        "id": "active:dummy_buff",
+        "name": "DummyBuff",
+        "dice_rolls": 0,
+        "roll_chance_expr": "100",
+        "skill_type": "buff",
+        "target_type": "splash",
+        "target_scope": "all",
+        "actions": [
+            {
+                "action_type": "buff",
+                "target_type": "splash",
+                "target_scope": "all",
+                "buffs": [
+                    {
+                        "id": "buff:dummy",
+                        "turns": 99
+                    }
+                ]
+            }
+        ],
+        "base_cooldown": 0,
+        "description": "Apply \"DummyBuff\" to all enetites"
+    },
+    {
+        "id": "active:seppuku",
+        "name": "Seppuku",
+        "dice_rolls": 1,
+        "roll_chance_expr": "self.hit_rate/10",
+        "skill_type": "attack",
+        "target_type": "self",
+        "actions": [
+            {
+                "action_type": "damage",
+                "target_type": "self",
+                "damage_type": "true",
+                "damage_expr": "9999999"
+            }
+        ],
+        "base_cooldown": 5,
+        "description": "Try to commit seppuku\nYes, you need to *try* to do it"
+    }
+]

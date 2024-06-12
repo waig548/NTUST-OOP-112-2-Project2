@@ -1,0 +1,38 @@
+add_library(lib-ftk
+    defs.h
+    Vec.h
+    Modifier.h
+    Modifier.cpp
+    utils.h
+    utils.cpp
+    Entity.h
+    Entity.cpp
+    Expr.h
+    Expr.cpp
+    Rect.h
+    Rect.cpp
+    World.h
+    World.cpp
+    Action.h
+    Action.cpp
+    Serializer.h
+    Serializer.cpp
+    Registry.h
+    Registry.cpp
+    Dice.h
+    Dice.cpp
+    Skill.h
+    Skill.cpp
+    Buff.h
+    Buff.cpp
+    Item.h
+    Item.cpp
+    Inventory.h
+    Inventory.cpp
+    combat.h
+    combat.cpp
+    GameManager.h
+    GameManager.cpp
+)
+target_include_directories(lib-ftk PUBLIC ".")
+target_link_libraries(lib-ftk PRIVATE stduuid nlohmann_json cparse CRCpp bimap effolkronium_random)
